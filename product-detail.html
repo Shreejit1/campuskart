@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - CampusKart</title>
+    <link rel="stylesheet" href="style.css"> <!-- Reuse the main CSS for consistency -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🎓 CampusKart</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#buy">Buy</a></li>
+                <li><a href="index.html#sell">Sell</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="product-detail">
+        <div id="product-info" class="detail-container">
+            <!-- Product details will be inserted here by JavaScript -->
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 CampusKart | Made by Students for Students</p>
+    </footer>
+
+    <script>
+        // Same products data as in script.js (for demo; in real app, fetch from backend)
+        const products = [
+            { name: "Used Calculus Book", price: 500, image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=250", category: "books", sellerName: "Alice Johnson", sellerEmail: "alice@example.com", sellerPhone: "+91-9876543210" },
+            { name: "Gaming Laptop", price: 25000, image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=250", category: "electronics", sellerName: "Bob Smith", sellerEmail: "bob@example.com", sellerPhone: "+91-9876543211" },
+            { name: "Study Chair", price: 1500, image: "https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=250", category: "furniture", sellerName: "Charlie Brown", sellerEmail: "charlie@example.com", sellerPhone: "+91-9876543212" },
+            { name: "Physics Textbook", price: 300, image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=250", category: "books", sellerName: "Diana Prince", sellerEmail: "diana@example.com", sellerPhone: "+91-9876543213" },
+            { name: "Wireless Mouse", price: 800, image: "https://images.unsplash.com/photo-1527814050087-3793815479db?w=250", category: "electronics", sellerName: "Eve Adams", sellerEmail: "eve@example.com", sellerPhone: "+91-9876543214" },
+            { name: "Dorm Desk", price: 2000, image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=250", category: "furniture", sellerName: "Frank Miller", sellerEmail: "frank@example.com", sellerPhone: "+91-9876543215" },
+             { name: "Scientific Calculator", price: 500, image: "https://images-cdn.ubuy.co.in/6687886fa55aea100b201f56-casio-fx-82cw-scientific-calculator-with.jpg", category: "books", sellerName: "George Lucas", sellerEmail: "george@example.com", sellerPhone: "+91-9876543216" },
+    { name: "Bluetooth Headphones", price: 1200, image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=250", category: "electronics", sellerName: "Helen Troy", sellerEmail: "helen@example.com", sellerPhone: "+91-9876543217" }
+        ];
+
+        // Get product ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = parseInt(urlParams.get('id'));
+
+        if (productId !== null && products[productId]) {
+            const product = products[productId];
+            document.getElementById('product-info').innerHTML = `
+                <img src="${product.image}" alt="${product.name}" class="detail-image">
+                <h2>${product.name}</h2>
+                <p class="price">Price: ₹${product.price}</p>
+                <p class="category">Category: ${product.category.charAt(0).toUpperCase() + product.category.slice(1)}</p>
+                <div class="seller-details">
+                    <h3>Seller Contact Details</h3>
+                    <p><strong>Name:</strong> ${product.sellerName}</p>
+                    <p><strong>Email:</strong> <a href="mailto:${product.sellerEmail}">${product.sellerEmail}</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:${product.sellerPhone}">${product.sellerPhone}</a></p>
+                </div>
+                <button onclick="window.close()" class="close-btn">Close</button>
+            `;
+        } else {
+            document.getElementById('product-info').innerHTML = '<p>Product not found.</p>';
+        }
+    </script>
+</body>
+</html>
