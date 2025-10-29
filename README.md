@@ -1,0 +1,1 @@
+A responsive student marketplace web app for buying/selling used items like books, laptops, and furniture. Built with HTML, CSS, JS. Features search/filtering, Flipkart-style cards, and seller contact pages. Perfect for ideathon demos!
