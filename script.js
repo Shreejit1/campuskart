@@ -2,7 +2,7 @@
 const products = [
     { name: "Used Calculus Book", price: 500, image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=250", category: "books", sellerName: "Alice Johnson", sellerEmail: "alice@example.com", sellerPhone: "+91-9876543210" },
     { name: "Gaming Laptop", price: 25000, image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=250", category: "electronics", sellerName: "Bob Smith", sellerEmail: "bob@example.com", sellerPhone: "+91-9876543211" },
-    { name: "Study Chair", price: 1500, image: "https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=250", category: "furniture", sellerName: "Charlie Brown", sellerEmail: "charlie@example.com", sellerPhone: "+91-9876543212" },
+    { name: "Study Chair", price: 1500, image: "https://m.media-amazon.com/images/I/51UhUNymTdL._AC_UF894,1000_QL80_.jpg", category: "furniture", sellerName: "Charlie Brown", sellerEmail: "charlie@example.com", sellerPhone: "+91-9876543212" },
     { name: "Physics Textbook", price: 300, image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=250", category: "books", sellerName: "Diana Prince", sellerEmail: "diana@example.com", sellerPhone: "+91-9876543213" },
     { name: "Wireless Mouse", price: 800, image: "https://images.unsplash.com/photo-1527814050087-3793815479db?w=250", category: "electronics", sellerName: "Eve Adams", sellerEmail: "eve@example.com", sellerPhone: "+91-9876543214" },
     { name: "Dorm Desk", price: 2000, image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=250", category: "furniture", sellerName: "Frank Miller", sellerEmail: "frank@example.com", sellerPhone: "+91-9876543215" },
